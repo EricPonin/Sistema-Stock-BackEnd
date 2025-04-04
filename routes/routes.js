@@ -10,6 +10,8 @@ const rutas = Router();
 // Rutas de categorías
 //------------------------------------------------------------------------------
 rutas.get('/categorias', categoriaController.verCategorias);
+rutas.get('/categorias/id/:id_categoria', categoriaController.verCategoriaPorId);
+rutas.get('/categorias/nombre/:nombre', categoriaController.verCategoriaPorNombre);
 
 //------------------------------------------------------------------------------
 
