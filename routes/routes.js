@@ -12,7 +12,9 @@ const rutas = Router();
 rutas.get('/categorias', categoriaController.verCategorias);
 rutas.get('/categorias/id/:id_categoria', categoriaController.verCategoriaPorId);
 rutas.get('/categorias/nombre/:nombre', categoriaController.verCategoriaPorNombre);
-
+rutas.post('/categorias', categoriaController.nuevaCategoria);
+rutas.delete('/categorias',categoriaController.borrarCategoria);
+rutas.put('/categorias', categoriaController.modificarCategoria);
 //------------------------------------------------------------------------------
 
 
