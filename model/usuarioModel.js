@@ -5,7 +5,6 @@ const db = require('../config/db');
 const getUsuarios = async() => {
     const [result] = await db.query('SELECT * FROM usuarios');
     return result;
-
 };
 
 //-------------------------------------------------------------------------------------------------------------
@@ -13,7 +12,6 @@ const getUsuarios = async() => {
 const getUsuariosId = async(id) =>{
     const [result] = await db.query('SELECT * FROM usuarios WHERE id_usuario = ?', [id]);
     return result;
-
 };
 
 //-------------------------------------------------------------------------------------------------------------
@@ -33,7 +31,7 @@ const deleteUsuario = async(nom,pass) => {
 
 //-------------------------------------------------------------------------------------------------------------
 
-const modificarUsuario = async(id,nom,email,pass) =>{
+const modifUsuario = async(id,nom,email,pass) =>{
     const [result] = await db.query(
         'UPDATE usuarios SET nombre = ?, email = ?, pass = ? WHERE id_usuario = ?',
         [nom,email,pass,id]
@@ -49,5 +47,5 @@ module.exports = {
     getUsuariosId,
     newUsuario,
     deleteUsuario,
-    modificarUsuario
+    modifUsuario
 };
