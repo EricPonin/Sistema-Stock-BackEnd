@@ -1,6 +1,7 @@
 const categoriaController = require('../controller/categoriaController');
 const usuarioController = require('../controller/usuarioController');
 const clienteController = require('../controller/clienteController');
+const proveedorController = require('../controller/proveedorController');
 
 const { Router } = require('express');
 
@@ -50,6 +51,9 @@ rutas.put('/clientes', clienteController.modificarCliente);
 
 //Rutas Proveedores
 //------------------------------------------------------------------------------
+rutas.get('/proveedores', proveedorController.verProveedores);
+rutas.get('/proveedores/id/:id_proveedor', proveedorController.verProveedorPorId);
+rutas.post('/proveedores', proveedorController.nuevoProveedor);
 //------------------------------------------------------------------------------
 
 //Rutas Usuarios
